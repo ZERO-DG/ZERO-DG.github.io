@@ -55,18 +55,22 @@
   };
 </script>
 
-  <meta name="description" content="虚怀若谷，戒骄戒躁。">
-<meta name="keywords" content="小咚,私人博客,java">
+  <meta name="description" content="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！学习链接： git入门">
+<meta name="keywords" content="git介绍,git命令总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git的学习，简单命令总结">
 <meta property="og:url" content="http://yoursite.com/2019/08/18/Git的学习，简单命令总结/index.html">
 <meta property="og:site_name" content="小咚の窝">
-<meta property="og:description" content="虚怀若谷，戒骄戒躁。">
+<meta property="og:description" content="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！学习链接： git入门">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-18T15:42:55.426Z">
+<meta property="og:image" content="https://img.mukewang.com/5d5971950001894312800720.jpg">
+<meta property="og:image" content="https://img3.mukewang.com/5c384c3a0001de6512800720.jpg">
+<meta property="og:image" content="https://img3.mukewang.com/5d597fed0001ecd812800720.jpg">
+<meta property="og:updated_time" content="2019-08-18T16:51:37.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git的学习，简单命令总结">
-<meta name="twitter:description" content="虚怀若谷，戒骄戒躁。">
+<meta name="twitter:description" content="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！学习链接： git入门">
+<meta name="twitter:image" content="https://img.mukewang.com/5d5971950001894312800720.jpg">
   <link rel="canonical" href="http://yoursite.com/2019/08/18/Git的学习，简单命令总结/">
 
 
@@ -272,12 +276,33 @@
                 
               
 
-              <time title="Created: 2019-08-18 23:42:53 / Modified: 23:42:55" itemprop="dateCreated datePublished" datetime="2019-08-18T23:42:53+08:00">2019-08-18</time>
+              <time title="Created: 2019-08-18 23:42:53" itemprop="dateCreated datePublished" datetime="2019-08-18T23:42:53+08:00">2019-08-18</time>
             </span>
           
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-19 00:51:37" itemprop="dateModified" datetime="2019-08-19T00:51:37+08:00">2019-08-19</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -291,7 +316,52 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h3 id="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！"><a href="#磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！" class="headerlink" title="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！"></a>磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！</h3><p><strong>学习链接：</strong> <a href="https://www.imooc.com/video/17964" target="_blank" rel="noopener">git入门</a></p>
+<a id="more"></a>
+<hr>
+<h1 id="一、为什么学习git？"><a href="#一、为什么学习git？" class="headerlink" title="一、为什么学习git？"></a>一、为什么学习git？</h1><p><img src="https://img.mukewang.com/5d5971950001894312800720.jpg" alt="git学习的原因"></p>
+<hr>
+<h1 id="二、git安装"><a href="#二、git安装" class="headerlink" title="二、git安装"></a>二、git安装</h1><blockquote>
+<h6 id="下载windows-git：Msysgit"><a href="#下载windows-git：Msysgit" class="headerlink" title="下载windows git：Msysgit"></a>下载windows git：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Msysgit</a></h6><p><strong>注：外网下载较慢，建议在国内的网站上寻找下载的相关版本。</strong></p>
+</blockquote>
+<hr>
+<p><img src="https://img3.mukewang.com/5c384c3a0001de6512800720.jpg" alt="Git工作流" title="GIt工作流"><br><strong><em>注：git工作流 工作区-&gt;版本库-&gt;推送线上</em></strong></p>
+<hr>
+<h1 id="三、Git命令"><a href="#三、Git命令" class="headerlink" title="三、Git命令"></a>三、Git命令</h1><ol>
+<li><strong>杂项命令</strong><ul>
+<li>显示当前文件目录<br><code>$ pwd</code></li>
+<li>转文件夹<br><code>$ cd 文件路径</code> <strong><em>(举例：cd /f/git 转到f盘下的git文件中;&emsp;注：<code>cd ..</code>是转到上级目录)</em></strong></li>
+<li>显示当前文件夹下文件<br><code>$ ll</code> <strong><em>（注：详细显示，文件夹或文件建立时间; &emsp; <code>ll -a</code> 是显示全部目录，包括隐藏目录，下同）</em></strong><br><code>$ ls</code> <strong><em>（注：简约显示，仅显示文件名）</em></strong></li>
+<li>在当前目录下建立一个文件夹<br><code>$ mkdir 文件名</code></li>
+<li>追加字符串，到该文件中，没有该文件则建立文件，有则追加字符串<br><code>$ echo &quot;git repo&quot; &gt;&gt; test.txt</code></li>
+<li>查看文件内容，文件必须已存在<br><code>$ cat test.txt</code></li>
+<li>清除当前窗口的信息<br><code>$ clear</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li><strong>基本操作</strong><ul>
+<li>初始化版本库<br><code>$ git init</code></li>
+<li>添加文件到版本库<br><code>$ git add &quot;文件名&quot;</code>  &nbsp; <strong><em>(注：-git add .  表示将目前所有修改文件提交到暂存区，” . “表示所有 )</em></strong><br><code>$ git commit -m &quot;提交时候的备注信息&quot;</code> <strong><em>(注：提交到仓库中)</em></strong></li>
+<li>查看仓库状态<br><code>$ git status</code></li>
+<li>从存储库退回到工作区<br><code>$ git reset HEAD &quot;文件名&quot;</code></li>
+<li>清除工作区被退回的文件<br><code>$ git checkout -- &quot;文件名&quot;</code></li>
+<li>回滚操作，查看提交分支，如下图<br><code>$ git checkout -- &quot;文件名&quot;</code><br><img src="https://img3.mukewang.com/5d597fed0001ecd812800720.jpg" alt="回滚"></li>
+<li>回滚操作，承接上面<br><code>$ git reset --hard &quot;id号,即上方被选中的&quot;</code></li>
+<li>删除文件<br><code>$ git rm &quot;文件名&quot;</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li><strong>远程操作</strong><ul>
+<li>初始化版本库<br><code>$ git init</code></li>
+</ul>
+</li>
+</ol>
+<p>后续再更。。。睡觉了凌晨1点了。。</p>
+
     </div>
 
     
@@ -301,6 +371,17 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/git介绍/" rel="tag"># git介绍</a>
+            
+              <a href="/tags/git命令总结/" rel="tag"># git命令总结</a>
+            
+          </div>
+        
 
         
 
@@ -379,7 +460,9 @@
         
           
         
-        <span class="site-state-item-count">1</span>
+          
+        
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span>
         </a>
       </div>
@@ -398,7 +481,11 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
