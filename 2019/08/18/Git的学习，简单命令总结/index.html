@@ -67,7 +67,9 @@
 <meta property="og:image" content="https://img3.mukewang.com/5c384c3a0001de6512800720.jpg">
 <meta property="og:image" content="https://img3.mukewang.com/5d597fed0001ecd812800720.jpg">
 <meta property="og:image" content="https://img.mukewang.com/5d5aa170000158d912800720.jpg">
-<meta property="og:updated_time" content="2019-08-19T13:19:34.301Z">
+<meta property="og:image" content="https://img4.mukewang.com/5d5aafd30001a01912800720.jpg">
+<meta property="og:image" content="https://img4.mukewang.com/5d5ab26b0001cd1512800720.jpg">
+<meta property="og:updated_time" content="2019-08-19T15:42:34.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git的学习，简单命令总结">
 <meta name="twitter:description" content="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！学习链接： git入门">
@@ -288,7 +290,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-19 21:19:34" itemprop="dateModified" datetime="2019-08-19T21:19:34+08:00">2019-08-19</time>
+                <time title="Modified: 2019-08-19 23:42:34" itemprop="dateModified" datetime="2019-08-19T23:42:34+08:00">2019-08-19</time>
               </span>
             
           
@@ -343,6 +345,8 @@
 <hr>
 <ol start="2">
 <li><strong>基本操作</strong><ul>
+<li>初始化用户名<br><code>$ git config --global user.name &quot;用户名&quot;</code></li>
+<li>初始化绑定邮箱<br><code>$ git config --global user.email &quot;github账号或者那你的邮箱&quot;</code></li>
 <li>初始化版本库<br><code>$ git init</code></li>
 <li>添加文件到版本库<br><code>$ git add &quot;文件名&quot;</code>  &nbsp; <strong><em>(注：-git add .  表示将目前所有修改文件提交到暂存区，” . “表示所有 )</em></strong><br><code>$ git commit -m &quot;提交时候的备注信息&quot;</code> <strong><em>(注：提交到仓库中)</em></strong></li>
 <li>查看仓库状态<br><code>$ git status</code></li>
@@ -358,11 +362,35 @@
 <p><strong><em>（注：远程操作，需要先注册github，拥有自己的一个账号）</em></strong></p>
 <ol start="3">
 <li><strong>远程操作</strong><ul>
-<li>SHH生成<br><code>$ ssh-keygen -t rsa -C &quot;这里是你的github账号&quot;</code></li>
-<li><em>SSH获取如下，获取后在github里面完成绑定即可。*</em><br><img src="https://img.mukewang.com/5d5aa170000158d912800720.jpg" alt="ssh获取"></li>
+<li>SHH生成<br><code>$ ssh-keygen -t rsa -C &quot;这里是你的github账号&quot;</code><br><code>$ cd ~</code> <strong><em>（注：这里是转到C盘的用户目录下，然后再如下）</em></strong><br><strong>SSH获取如下，获取后在github里面完成绑定即可：</strong><br><img src="https://img.mukewang.com/5d5aa170000158d912800720.jpg" alt="ssh获取"></li>
+<li>测试是否连接成功<br><code>$ ssh -T git@github.com</code></li>
+<li>连接仓库，连接之前需要先创建自己的仓库，然后去页面获取绑定的ssh或者url，再执行如下操作<br><code>$ git remote add origin 仓库的地址(url或ssh)</code></li>
+<li>将之前写好提交到版本库的文件，推送到github上，即你自己建立的仓库，完成后就可以查看了<br><code>$ git push -u origin master</code></li>
+<li>克隆仓库，会克隆到当前目录下<br><code>$ git clone 仓库的地址</code></li>
 </ul>
 </li>
 </ol>
+<hr>
+<ol start="4">
+<li><strong>标签&amp;分支</strong><ul>
+<li>标签基本操作：<br><img src="https://img4.mukewang.com/5d5aafd30001a01912800720.jpg" alt="标签基操"></li>
+<li>删除远程标签<br><code>$ git push origin :refs/tags/标签名</code> <strong><em>or</em></strong> <code>$ git push origin --delete 标签名</code></li>
+<li>分支思路图解<br><img src="https://img4.mukewang.com/5d5ab26b0001cd1512800720.jpg" alt="分支过程"></li>
+<li>创建分支<br><code>$ git branch 分支名</code></li>
+<li>查看分支<br><code>$ git branch</code></li>
+<li>转换到被编辑的分支<br><code>$ git checkout 分支名</code></li>
+<li>合并之前，需要先转换到主分支上<br><code>$ git merge 被合并的分支名</code></li>
+<li>删除本地分支<br><code>$ git branch -d 分支名</code></li>
+<li>删除远程分支<br><code>$ git push origin -d 分支名</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h1><p>&emsp;&emsp;git简单入门，平时使用起来应该够用了，需要更复杂的操作到时候再查！收获的话，就是还是不能太放松自己，抓紧学，感觉工作需要的知识，和现在自己学到的知识还差的太多；平时应该注意细节积累。</p>
+<p><strong>今日份励志名言：</strong></p>
+<blockquote>
+<p>“博观而约取，厚积而薄发，吾告子止于此矣。”<br> ——（语出 宋·苏轼《稼说送张琥》）</p>
+</blockquote>
 
     </div>
 
