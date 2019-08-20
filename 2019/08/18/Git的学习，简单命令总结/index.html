@@ -69,7 +69,7 @@
 <meta property="og:image" content="https://img.mukewang.com/5d5aa170000158d912800720.jpg">
 <meta property="og:image" content="https://img4.mukewang.com/5d5aafd30001a01912800720.jpg">
 <meta property="og:image" content="https://img4.mukewang.com/5d5ab26b0001cd1512800720.jpg">
-<meta property="og:updated_time" content="2019-08-19T15:42:34.455Z">
+<meta property="og:updated_time" content="2019-08-20T08:06:24.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git的学习，简单命令总结">
 <meta name="twitter:description" content="磨磨唧唧半个月左右终于学习完git了，今天就来总结一下！学习链接： git入门">
@@ -290,7 +290,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-19 23:42:34" itemprop="dateModified" datetime="2019-08-19T23:42:34+08:00">2019-08-19</time>
+                <time title="Modified: 2019-08-20 16:06:24" itemprop="dateModified" datetime="2019-08-20T16:06:24+08:00">2019-08-20</time>
               </span>
             
           
@@ -352,7 +352,7 @@
 <li>查看仓库状态<br><code>$ git status</code></li>
 <li>从存储库退回到工作区<br><code>$ git reset HEAD &quot;文件名&quot;</code></li>
 <li>清除工作区被退回的文件<br><code>$ git checkout -- &quot;文件名&quot;</code></li>
-<li>回滚操作，查看提交分支，如下图<br><code>$ git checkout -- &quot;文件名&quot;</code><br><img src="https://img3.mukewang.com/5d597fed0001ecd812800720.jpg" alt="回滚"></li>
+<li>回滚操作，查看提交分支，如下图<br><img src="https://img3.mukewang.com/5d597fed0001ecd812800720.jpg" alt="回滚"></li>
 <li>回滚操作，承接上面<br><code>$ git reset --hard &quot;id号,即上方被选中的&quot;</code></li>
 <li>删除文件<br><code>$ git rm &quot;文件名&quot;</code></li>
 </ul>
@@ -609,16 +609,11 @@
 
   
     
-    
-  
-    
   
   <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  <script defer src="/lib/three/three.min.js"></script>
-  <script defer src="/lib/three/canvas_lines.min.js"></script>
 
 <script src="/js/utils.js?v=7.3.0"></script>
   <script src="/js/motion.js?v=7.3.0"></script>
@@ -631,6 +626,30 @@
 <script src="/js/next-boot.js?v=7.3.0"></script>
 
 
+    
+  
+
+  <script>
+    ;((d, w) => {
+      loadThree = () => {
+        let s = d.createElement('script');
+        s.src = '/lib/three/three.min.js';
+        d.body.appendChild(s);
+      }
+      let styles = ['', '/lib/three/canvas_lines.min.js', ''];
+      loadStyle = () => {
+        styles.forEach(x => {
+          if (x !== '') {
+            let s = d.createElement('script');
+            s.src = x;
+            d.body.appendChild(s);
+          }
+        })
+      }
+      w.addEventListener('DOMContentLoaded', loadThree);
+      w.addEventListener('load', loadStyle);
+    })(document, window);
+  </script>
 
 
   
